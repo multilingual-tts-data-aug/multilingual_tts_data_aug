@@ -1,0 +1,720 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Automaticaly generated content, please update scripts/htmlgen.py for any change -->
+   <head>
+      <meta charset="UTF-8">
+      <title align="center">multilingual-tts samples"</title>
+      <style type="text/css">
+        body, input, select, td, li, div, textarea, p {
+        	font-size: 11px;
+        	line-height: 16px;
+        	font-family: verdana, arial, sans-serif;
+        }
+
+        body {
+        	margin:5px;
+        	background-color:white;
+        }
+
+        h1 {
+        	font-size:16px;
+        	font-weight:bold;
+        }
+
+        h2 {
+        	font-size:14px;
+        	font-weight:bold;
+        }
+      </style>
+   </head>
+   <body>
+      <article>
+         <header>
+            <h1>Improving Polyglot Speech Synthesis through Multi-task and Adversarial Learning</h1>
+         </header>
+      </article>
+
+
+      <div>
+        <h2>Abstract</h2>
+        <p>It is still quite challenging for polyglot speech synthesis systems to synthesise speech with the same pronunciations and accent as a native speaker, especially when there are fewer speakers per language. In this work, we target an extreme version of the polyglot synthesis problem, where we have only one speaker per language, and the system has to learn to disentangle speaker from language features from just one speaker-language pair. To tackle this problem, we propose a novel approach based on a combination of multi-task learning and adversarial learning to help the model produce more realistic acoustic features for speaker-language combinations for which we have no data. Our proposed system improves the overall naturalness of synthesised speech achieving upto 4.2% higher naturalness over a multispeaker baseline. Our qualitative listening tests also demonstrate that system produces speech which sounds less accented and more natural to a native speaker.</p>
+      </div>
+
+      <h2> Supplementary audio samples </h2>
+
+
+    <div>
+    <h2> English </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Single_Spk/device_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk/device_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk_with_MT+GAN/device_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Single_Spk/cannot_static_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk/cannot_static_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk_with_MT+GAN/cannot_static_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Single_Spk/alarm_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk/alarm_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk_with_MT+GAN/alarm_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Single_Spk/calling_static_9.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk/calling_static_9.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk_with_MT+GAN/calling_static_9.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Single_Spk/calling_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk/calling_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/English/Multi_Spk_with_MT+GAN/calling_dynamic_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> French </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Single_Spk/weather_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk/weather_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk_with_MT+GAN/weather_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Single_Spk/device_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk/device_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk_with_MT+GAN/device_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Single_Spk/music_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk/music_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk_with_MT+GAN/music_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Single_Spk/alarm_00050.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk/alarm_00050.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk_with_MT+GAN/alarm_00050.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Single_Spk/calling_00443.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk/calling_00443.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/French/Multi_Spk_with_MT+GAN/calling_00443.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> German </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Single_Spk/contacts_01273.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk/contacts_01273.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk_with_MT+GAN/contacts_01273.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Single_Spk/alarm_00096.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk/alarm_00096.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk_with_MT+GAN/alarm_00096.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Single_Spk/calling_00443.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk/calling_00443.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk_with_MT+GAN/calling_00443.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Single_Spk/music_03023.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk/music_03023.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk_with_MT+GAN/music_03023.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Single_Spk/device_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk/device_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/German/Multi_Spk_with_MT+GAN/device_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> Italian </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Single_Spk/weather_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk/weather_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/weather_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Single_Spk/alarm_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk/alarm_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/alarm_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Single_Spk/device_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk/device_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/device_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Single_Spk/music_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk/music_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/music_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Single_Spk/calling_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk/calling_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/calling_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> Spanish </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Single_Spk/alarm_static_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk/alarm_static_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/alarm_static_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Single_Spk/music_dynamic_08.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk/music_dynamic_08.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/music_dynamic_08.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Single_Spk/cannot_static_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk/cannot_static_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/cannot_static_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Single_Spk/device_dynamic_02.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk/device_dynamic_02.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/device_dynamic_02.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Single_Spk/calling_dynamic_09.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk/calling_dynamic_09.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/calling_dynamic_09.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+
+            </table>
+        </div>
+        
+
+   </body>
+</html>
+
