@@ -32,21 +32,24 @@
    <body>
       <article>
          <header>
-            <h1>Improving Polyglot Speech Synthesis through Multi-task and Adversarial Learning</h1>
+            <h1>Multilingual Speech Synthesis with Data Augmentation</h1>
          </header>
       </article>
 
 
       <div>
         <h2>Abstract</h2>
-        <p>It is still quite challenging for polyglot speech synthesis systems to synthesise speech with the same pronunciations and accent as a native speaker, especially when there are fewer speakers per language. In this work, we target an extreme version of the polyglot synthesis problem, where we have only one speaker per language, and the system has to learn to disentangle speaker from language features from just one speaker-language pair. To tackle this problem, we propose a novel approach based on a combination of multi-task learning and adversarial learning to help the model produce more realistic acoustic features for speaker-language combinations for which we have no data. Our proposed system improves the overall naturalness of synthesised speech achieving upto 4.2% higher naturalness over a multispeaker baseline. Our qualitative listening tests also demonstrate that system produces speech which sounds less accented and more natural to a native speaker.</p>
+        <p>State of the art text-to-speech (TTS) models can generate high fidelity monolingual speech, but it remains a challenging problem to generate multilingual speech from a given speaker identity. One major hurdle is that the training data used in TTS systems is usually from monolingual speakers because it is extremely hard to source speakers with multilingual capabilities at the native level. Subsequently, language and speaker information are highly correlated which makes it very challenging for the model to disentangle their conditioning features both during training and at inference time. In this paper, we propose a data augmentation approach to tackle this correlation problem. 
+We leverage the power of a pre-trained cross-lingual representation model to extract speaker-independent context features and use these features as input to a voice conversion model. The voice conversion model is used to convert speech from several languages to the voice of the target speaker. 
+A single-speaker, multilingual TTS  is trained using the target speaker’s data from their original language together with the synthetic multilingual data converted from other speakers.
+Through the data augmentation method, our proposed multilingual model can synthesize audio from text input in 5 languages (English, Spanish, French, German, Italian). Our system achieves a Mean Opinion Score (MOS) of 3.74 compared with 3.62 from the multi-speaker system in Spanish, 3.11 over 2.71 in German, 3.47 over 2.84 in Italian, and 2.72 over 2.41 in French. </p>
       </div>
 
       <h2> Supplementary audio samples </h2>
 
 
     <div>
-    <h2> English </h2>
+    <h2> Spanish </h2>
       <table border = "1" class="inlineTable">
     
 
@@ -54,53 +57,36 @@
         <col width="300">
         <col width="300">
      <tr> 
-
-        <th>Single_Spk</th>
-        <th>Multi_Spk</th>
-        <th>Multi_Spk_with_MT+GAN</th>
+        <th>Baseline_vc</th>
+        <th>Baseline_mono</th>
+        <th>Baseline_multi </th>
+        <th>Proposed multilingual model</th>
 </tr>
 <tr>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Single_Spk/device_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/es_vc_v2/alarm_dynamic_01.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk/device_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_prod_v2/alarm_dynamic_01.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk_with_MT+GAN/device_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_multi_v2/alarm_dynamic_01.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
-</tr>
-<tr>
-
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Single_Spk/cannot_static_1.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk/cannot_static_1.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk_with_MT+GAN/cannot_static_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_xlang_v3/alarm_dynamic_01.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -109,21 +95,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Single_Spk/alarm_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/es_vc_v2/alarm_static_01.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk/alarm_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_prod_v2/alarm_static_01.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk_with_MT+GAN/alarm_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_multi_v2/alarm_static_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/es_mos_test/nicole_samples_es_xlang_v3/alarm_static_01.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -132,21 +124,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Single_Spk/calling_static_9.wav type="audio/wav">
+        <source src=./samples/es_mos_test/es_vc_v2/calling_dynamic_23.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk/calling_static_9.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_prod_v2/calling_dynamic_23.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk_with_MT+GAN/calling_static_9.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_multi_v2/calling_dynamic_23.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/es_mos_test/nicole_samples_es_xlang_v3/calling_dynamic_23.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -155,32 +153,66 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Single_Spk/calling_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/es_vc_v2/device_dynamic_07.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk/calling_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_prod_v2/device_dynamic_07.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/English/Multi_Spk_with_MT+GAN/calling_dynamic_1.wav type="audio/wav">
+        <source src=./samples/es_mos_test/nicole_samples_es_multi_v2/device_dynamic_07.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/es_mos_test/nicole_samples_es_xlang_v3/device_dynamic_07.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 </tr>
+<tr>
 
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/es_mos_test/es_vc_v2/holiday_dynamic_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/es_mos_test/nicole_samples_es_prod_v2/holiday_dynamic_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/es_mos_test/nicole_samples_es_multi_v2/holiday_dynamic_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/es_mos_test/nicole_samples_es_xlang_v3/holiday_dynamic_01.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
             </table>
         </div>
         
 
     <div>
-    <h2> French </h2>
+        <h2> German </h2>
       <table border = "1" class="inlineTable">
     
 
@@ -188,53 +220,36 @@
         <col width="300">
         <col width="300">
      <tr> 
-
-        <th>Single_Spk</th>
-        <th>Multi_Spk</th>
-        <th>Multi_Spk_with_MT+GAN</th>
+        <th>Baseline_vc</th>
+        <th>Baseline_mono</th>
+        <th>Baseline_multi </th>
+        <th>Proposed multilingual model</th>
 </tr>
 <tr>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Single_Spk/weather_1.wav type="audio/wav">
+        <source src=./samples/de_mos_test/de_vc_v2/alarm_00233.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk/weather_1.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_prod_v2/alarm_00233.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk_with_MT+GAN/weather_1.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_multi_v2/alarm_00233.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
-</tr>
-<tr>
-
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Single_Spk/device_1.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk/device_1.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk_with_MT+GAN/device_1.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_xlang_v2/alarm_00233.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -243,21 +258,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Single_Spk/music_1.wav type="audio/wav">
+        <source src=./samples/de_mos_test/de_vc_v2/music_03023.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk/music_1.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_prod_v2/music_03023.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk_with_MT+GAN/music_1.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_multi_v2/music_03023.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/de_mos_test/nicole_samples_de_xlang_v2/music_03023.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -266,21 +287,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Single_Spk/alarm_00050.wav type="audio/wav">
+        <source src=./samples/de_mos_test/de_vc_v2/music_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk/alarm_00050.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_prod_v2/music_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk_with_MT+GAN/alarm_00050.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_multi_v2/music_3.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/de_mos_test/nicole_samples_de_xlang_v2/music_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -289,63 +316,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Single_Spk/calling_00443.wav type="audio/wav">
+        <source src=./samples/de_mos_test/de_vc_v2/wiki_data_559758.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk/calling_00443.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_prod_v2/wiki_data_559758.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/French/Multi_Spk_with_MT+GAN/calling_00443.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_multi_v2/wiki_data_559758.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
-</tr>
-
-            </table>
-        </div>
-        
-
-    <div>
-    <h2> German </h2>
-      <table border = "1" class="inlineTable">
-    
-
-        <col width="300">
-        <col width="300">
-        <col width="300">
-     <tr> 
-
-        <th>Single_Spk</th>
-        <th>Multi_Spk</th>
-        <th>Multi_Spk_with_MT+GAN</th>
-</tr>
-<tr>
-
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/German/Single_Spk/contacts_01273.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk/contacts_01273.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk_with_MT+GAN/contacts_01273.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_xlang_v2/wiki_data_559758.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -354,95 +345,31 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/German/Single_Spk/alarm_00096.wav type="audio/wav">
+        <source src=./samples/de_mos_test/de_vc_v2/weather_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk/alarm_00096.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_prod_v2/weather_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk_with_MT+GAN/alarm_00096.wav type="audio/wav">
+        <source src=./samples/de_mos_test/nicole_samples_de_multi_v2/weather_3.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/de_mos_test/nicole_samples_de_xlang_v2/weather_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 </tr>
-<tr>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Single_Spk/calling_00443.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk/calling_00443.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk_with_MT+GAN/calling_00443.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-</tr>
-<tr>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Single_Spk/music_03023.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk/music_03023.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk_with_MT+GAN/music_03023.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-</tr>
-<tr>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Single_Spk/device_2.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk/device_2.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/German/Multi_Spk_with_MT+GAN/device_2.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-</tr>
-
             </table>
         </div>
         
@@ -456,53 +383,36 @@
         <col width="300">
         <col width="300">
      <tr> 
-
-        <th>Single_Spk</th>
-        <th>Multi_Spk</th>
-        <th>Multi_Spk_with_MT+GAN</th>
+        <th>Baseline_vc</th>
+        <th>Baseline_mono</th>
+        <th>Baseline_multi </th>
+        <th>Proposed multilingual model</th>
 </tr>
 <tr>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Single_Spk/weather_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/it_vc_v2/alarm_00233.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk/weather_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_prod_v2/alarm_00233.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/weather_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_multi_v2/alarm_00233.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
-</tr>
-<tr>
-
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Single_Spk/alarm_1.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk/alarm_1.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/alarm_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_xlang_v2/alarm_00233.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -511,21 +421,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Single_Spk/device_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/it_vc_v2/contacts_01416.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk/device_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_prod_v2/contacts_01416.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/device_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_multi_v2/contacts_01416.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/it_mos_test/nicole_samples_it_xlang_v2/contacts_01416.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -534,21 +450,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Single_Spk/music_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/it_vc_v2/music_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk/music_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_prod_v2/music_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/music_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_multi_v2/music_3.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/it_mos_test/nicole_samples_it_xlang_v2/music_3.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -557,32 +479,66 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Single_Spk/calling_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/it_vc_v2/timer_06301.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk/calling_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_prod_v2/timer_06301.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Italian/Multi_Spk_with_MT+GAN/calling_1.wav type="audio/wav">
+        <source src=./samples/it_mos_test/nicole_samples_it_multi_v2/timer_06301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/it_mos_test/nicole_samples_it_xlang_v2/timer_06301.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 </tr>
+<tr>
 
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/it_mos_test/it_vc_v2/weather_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/it_mos_test/nicole_samples_it_prod_v2/weather_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/it_mos_test/nicole_samples_it_multi_v2/weather_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/it_mos_test/nicole_samples_it_xlang_v2/weather_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
             </table>
         </div>
         
 
     <div>
-    <h2> Spanish </h2>
+    <h2> French </h2>
       <table border = "1" class="inlineTable">
     
 
@@ -590,53 +546,36 @@
         <col width="300">
         <col width="300">
      <tr> 
-
-        <th>Single_Spk</th>
-        <th>Multi_Spk</th>
-        <th>Multi_Spk_with_MT+GAN</th>
+        <th>Baseline_vc</th>
+        <th>Baseline_mono</th>
+        <th>Baseline_multi </th>
+        <th>Proposed multilingual model</th>
 </tr>
 <tr>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Single_Spk/alarm_static_01.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/fr_vc_v2/device_1.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk/alarm_static_01.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_prod_v2/device_1.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/alarm_static_01.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_multi_v2/device_1.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
-</tr>
-<tr>
-
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Single_Spk/music_dynamic_08.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk/music_dynamic_08.wav type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </td>
-
-    <td>
-        <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/music_dynamic_08.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_xlang_v2/device_1.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -645,21 +584,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Single_Spk/cannot_static_01.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/fr_vc_v2/messaging_02486.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk/cannot_static_01.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_prod_v2/messaging_02486.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/cannot_static_01.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_multi_v2/messaging_02486.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_xlang_v2/messaging_02486.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -668,21 +613,27 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Single_Spk/device_dynamic_02.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/fr_vc_v2/timer_1.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk/device_dynamic_02.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_prod_v2/timer_1.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/device_dynamic_02.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_multi_v2/timer_1.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_xlang_v2/timer_1.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
@@ -691,28 +642,66 @@
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Single_Spk/calling_dynamic_09.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/fr_vc_v2/weather_6.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk/calling_dynamic_09.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_prod_v2/weather_6.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 
     <td>
         <audio controls style="width: 200px;">
-        <source src=./samples/Spanish/Multi_Spk_with_MT+GAN/calling_dynamic_09.wav type="audio/wav">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_multi_v2/weather_6.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_xlang_v2/weather_6.wav type="audio/wav">
             Your browser does not support the audio element.
         </audio>
     </td>
 </tr>
+<tr>
 
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/fr_mos_test/fr_vc_v2/music_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_prod_v2/music_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_multi_v2/music_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./samples/fr_mos_test/nicole_samples_fr_xlang_v2/music_2.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
             </table>
         </div>
+        
+
+    <div>
+
         
 
    </body>
