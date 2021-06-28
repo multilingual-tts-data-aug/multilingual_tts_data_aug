@@ -1,0 +1,150 @@
+alarm_dynamic_01	Ok, alarma programada para mañana a las 6 AM.
+alarm_dynamic_02	Ok, alarma programada para mañana a las 8 AM.
+alarm_dynamic_03	Ok, posponiendo alarma por 10 minutos.
+alarm_dynamic_04	Para emergencias, llama al "novecientos once" desde tu teléfono.
+alarm_static_01	Lo siento, esa hora parece incorrecta. ¿Me la repites?
+alarm_static_02	No hay ninguna alarma configurada ahora.
+alarm_static_03	No hay ninguna alarma sonando en este momento que pueda posponer.
+alarm_static_04	Ok, se canceló.
+alarm_static_05	Ok. ¿Cuál quieres cancelar?
+alarm_static_06	Ok. ¿Para qué hora?
+calling_dynamic_01	¿Cómo se llama tu abuela?
+calling_dynamic_02	¿Cómo se llama tu padre?
+calling_dynamic_03	Llamando a "Águeda Revuelta".
+calling_dynamic_04	Llamando a "Alfonso Parada".
+calling_dynamic_05	Llamando a "Amador Borja".
+calling_dynamic_06	Llamando a "Amaia Lorenzo".
+calling_dynamic_07	Llamando a "Antonio Santos".
+calling_dynamic_08	Llamando a "Bianca Orellana".
+calling_dynamic_09	Llamando a "Carmen Juárez".
+calling_dynamic_10	Llamando a "Lidia Candela".
+calling_dynamic_11	Llamando a "Maribel Lazcano".
+calling_dynamic_12	Llamando a "Rodolfo Herreros".
+calling_dynamic_13	Llamar a "Abel Cardona", ¿verdad?
+calling_dynamic_14	Llamar a "Adrián Herranz", ¿verdad?
+calling_dynamic_15	Llamar a "Ainoa Aranda", ¿verdad?
+calling_dynamic_16	Llamar a "Angélica de Miguel", ¿verdad?
+calling_dynamic_17	Llamar a "Belén Dueñas", ¿verdad?
+calling_dynamic_18	Llamar a "Ezequiel de la Torre", ¿verdad?
+calling_dynamic_19	Llamar a "Jairo Durán", ¿verdad?
+calling_dynamic_20	Llamar a "Ona Garcés", ¿verdad?
+calling_dynamic_21	Llamar a "Rafa Montes", ¿verdad?
+calling_dynamic_22	Llamar a "Roberto Rodríguez", ¿verdad?
+calling_dynamic_23	No sé quién es tu abuelo, ¿cómo se llama?.
+calling_dynamic_24	No sé quién es tu madre, ¿cómo se llama?
+calling_static_01	¿A cuál?
+calling_static_02	Claro, ¿A quién quieres agregar?
+calling_static_03	Dime a quién llamar o di "Olvídalo".
+calling_static_04	Nadie está llamando.
+calling_static_05	Ok, contestando en la televisión.
+calling_static_06	Ok. ¿A quién llamo?
+calling_static_07	Por ahora eso no funciona durante las llamadas.
+cannot_static_01	Lo siento, no entendí. Establece el brillo en un número entre 0 y 10.
+cannot_static_02	Lo siento, no entendí. Establece el volumen en un número del 1 al 10.
+cannot_static_03	Lo siento, no puedo encontrar la app.
+cannot_static_04	Lo siento, no sé cuándo es eso.
+cannot_static_05	Lo siento, todavía no puedo hacer eso.
+cannot_static_06	No encontré ninguna coincidencia. Realiza la búsqueda aquí.
+cannot_static_07	Tal parece que hubo un error, por favor, trate de nuevo.
+device_dynamic_01	Brillo establecido en 6.
+device_dynamic_02	De acuerdo, abriendo Photobooth.
+device_dynamic_03	Ok, abriendo Contacts.
+device_dynamic_04	Ok, abriendo Photobooth.
+device_dynamic_05	Ok, abriendo Spotify.
+device_dynamic_06	Ok, abriendo Watch.
+device_dynamic_07	Para obtener "Spotify", accede a "Portal Apps" y descárgala desde allí.
+device_dynamic_08	Para obtener "YouTube", accede a "Portal Apps" y descárgala desde allí.
+device_dynamic_09	Volumen establecido en 3.
+device_static_01	¿Cuál es la opción correcta?
+device_static_02	¿Qué app?
+device_static_03	De acuerdo, pantalla apagada.
+device_static_04	Ok, pantalla apagada.
+device_static_05	Ok, se guardó.
+device_static_06	Para cambiar el brillo, usa el control remoto de tu televisor.
+device_static_07	Para cambiar el volumen en Portal TV, usa el control remoto de tu dispositivo Portal.
+example_static_01	Puedes decir, por ejemplo, "Hey Portal, ¿Cómo estará el tiempo este fin de semana?" o "Hey Portal, abre iHeartRadio".
+example_static_02	Puedes decir, por ejemplo, "Hey Portal, ¿Cuál es el pronóstico del tiempo para mañana en Londres?" o "Hey Portal, pon una alarma para las seis de la mañana".
+example_static_03	Puedes decir, por ejemplo, "Hey Portal, ¿Puedes iniciar un temporizador?" o "Hey Portal, llama a Tomás Palacios".
+example_static_04	Puedes decir, por ejemplo, "Hey Portal, ¿Qué día es hoy?" o "Hey Portal, pon un temporizador de dos minutos".
+example_static_05	Puedes decir, por ejemplo, "Hey Portal, apaga la pantalla" o "Hey Portal, quiero hacer una llamada".
+example_static_06	Puedes decir, por ejemplo, "Hey Portal, llama a Dora Martinez" o "Hey Portal, ¿Qué hora es en Pekín?".
+example_static_07	Puedes decir, por ejemplo, "Hey Portal, sube el volumen" o "Hey Portal, ¿Cómo está el tiempo?".
+example_static_09	Puedes decir, por ejemplo, "Hey Portal, ve a la pantalla de inicio" o "Hey Portal, ¿Cuál es el pronóstico del tiempo para hoy?"
+holiday_dynamic_01	Es viernes, 1 de mayo.
+holiday_dynamic_02	Es viernes, 24 de abril.
+holiday_dynamic_03	Es viernes, 25 de diciembre.
+holiday_dynamic_04	Faltan 9 meses y 1 semana para viernes, 25 de diciembre.
+music_dynamic_01	Aquí está el playlist "¡Viva Latino!", de Spotify.
+music_dynamic_02	Aquí está el playlist "Baila Reggaeton", de Spotify.
+music_dynamic_03	Aquí está el playlist "Éxitos Mexicanos", de iHeartRadio.
+music_dynamic_04	Aquí está el playlist "Fiesta Latina", de iHeartRadio.
+music_dynamic_05	Aquí está el playlist "Merengue Clásico", de Spotify.
+music_dynamic_06	Aquí está el playlist "Rock en Español", de Spotify.
+music_dynamic_07	Escuchando la estación "El Mayor Clasico Radio" en Pandora.
+music_dynamic_08	Escuchando la estación "Enrique Iglesias Radio" en Pandora.
+music_dynamic_09	Escuchando la estación "Juanes Radio" en Pandora.
+music_dynamic_10	Escuchando la estación "Kid Rock Radio" en Pandora.
+music_dynamic_11	Escuchando la estación "Top Hits Planet Radio" en Pandora.
+music_dynamic_12	Escuchando la estación "ZZ Top Radio" en Pandora.
+music_dynamic_13	Reproduciendo "Adagio in G Major" de Johann Sebastian Bach, en Spotify.
+music_dynamic_14	Reproduciendo "Despacito" de Luis Fonsi, en Spotify.
+music_dynamic_15	Reproduciendo "La Camisa Negra" de Juanes, en Spotify.
+music_dynamic_16	Reproduciendo "LA CANCIÓN" de J Balvin, en Spotify.
+music_dynamic_17	Reproduciendo "Toca mi canción" de Jarabe De Palo, en Spotify.
+music_dynamic_18	Reproduciendo "Un Poco de Amor" de Shakira, en Spotify.
+music_dynamic_19	Tocando "98.9 KISS FM", en iHeartRadio.
+music_dynamic_20	Tocando "Antonio Aguilar", en iHeartRadio.
+music_dynamic_21	Tocando "Dinastia de Tuzantla, Mich.", en iHeartRadio.
+music_dynamic_22	Tocando "Música Discoteca Lista de Reproducción Best 2015" de Various Artists, en Spotify.
+music_dynamic_23	Tocando "Today's Mix", en iHeartRadio.
+music_dynamic_24	Tocando "Yandel feat. Bad Bunny", en iHeartRadio.
+music_static_01	Eso no funciona con el servicio que estás usando.
+music_static_02	Lo siento, no puedo encontrar una coincidencia para eso en Spotify.
+music_static_03	No se está reproduciendo nada.
+music_static_04	Ok, activando orden aleatorio.
+music_static_05	Para hacer eso, primero inicia sesión en Spotify.
+timer_dynamic_01	Hay 4 temporizadores. ¿Cuál quieres borrar?
+timer_dynamic_02	Ok, temporizador de 1 hora.
+timer_dynamic_03	Ok, temporizador de 1 minuto.
+timer_dynamic_04	Ok, temporizador de 15 minutos.
+timer_dynamic_05	Ok, temporizador de 3 minutos.
+timer_dynamic_06	Ok, temporizador de 5 minutos.
+timer_dynamic_07	Temporizador de 5 minutos cancelado.
+timer_static_01	¿Cuál quieres pausar?
+timer_static_02	¿Quieres pausar el primero, el segundo o el tercer temporizador?
+timer_static_03	No hay ningún temporizador programado en este momento.
+timer_static_04	Ok, reanudando el temporizador.
+timer_static_05	Ok, se cancelaron todos los temporizadores.
+timer_static_06	Ok. ¿A cuánto lo cambio?
+timer_static_07	Pausando temporizador.
+timer_static_08	Temporizador cancelado.
+timer_static_09	Temporizador. ¿Por cuánto tiempo?
+timer_static_10	Tu temporizador ya se encuentra activo.
+timer_static_11	Tu temporizador ya se encuentra en pausa.
+timer_static_12	Un temporizador. ¿Por cuánto tiempo?
+weather_dynamic_01	En Barcelona hace 13 grados y está parcialmente nuboso.
+weather_dynamic_02	En Chicago hace 54 grados y está mayormente soleado.
+weather_dynamic_03	En La Coruña hace 10 grados y está parcialmente nuboso.
+weather_dynamic_04	En Madrid hace 61 grados y está soleado.
+weather_dynamic_05	En New York hace 45 grados con lluvia.
+weather_dynamic_06	En Ontario hace 63 grados y está nublado.
+weather_dynamic_07	En San Antonio hace 66 grados y está despejado.
+weather_dynamic_08	En San Fernando hace 61 grados y está despejado.
+weather_dynamic_09	Hoy en Madrid habrá chubascos con una máxima de 61 grados y una mínima de 39 grados.
+weather_dynamic_10	Hoy en New York estará mayormente soleado con una máxima de 64 grados y una mínima de 50 grados.
+weather_static_01	Lo siento, no puedo obtener el estado del tiempo de fechas pasadas.
+weather_static_02	Lo siento, solo puedo obtener el pronóstico meteorológico de los próximos 10 días.
+wikipedia_01	El achote tiñe de color rojo anaranjado los aceites y especias que se utilizan en la cocina.
+wikipedia_02	El bulbo o núcleo galáctico, situado en el centro de la galaxia, es la zona con mayor densidad de estrellas.
+wikipedia_03	El espacio-tiempo es el modelo matemático que combina el espacio y el tiempo en un único continuo como dos conceptos inseparablemente relacionados.
+wikipedia_04	El halo es una estructura esferoidal que envuelve la galaxia en la que la concentración de estrellas es muy baja y apenas existen nubes de gas.
+wikipedia_05	El tiempo es una magnitud física con que se mide la duración o separación de acontecimientos.
+wikipedia_06	La capacidad de almacenamiento de una memoria digital también se mide en bits.
+wikipedia_07	La Ilíada es una epopeya griega, atribuida tradicionalmente a Homero, que narra los acontecimientos ocurridos en el último año de la guerra de Troya.
+wikipedia_08	La masa es una medida de la cantidad de material que posee un cuerpo.
+wikipedia_09	La velocidad es la magnitud física de carácter vectorial que relaciona el cambio de posición o desplazamiento con el tiempo.
+wikipedia_10	La Vía Láctea es una galaxia en forma de espiral donde se encuentra el sistema solar y la Tierra.
+wikipedia_11	Las plaquetas se encargan de la coagulación de la sangre.
+wikipedia_12	Las proteínas o prótidos ​son macromoléculas formadas por cadenas lineales de aminoácidos.
+wikipedia_13	Los aminoácidos son la base de las proteínas, y se clasifican egún las propiedades de su cadena lateral.
+wikipedia_14	Tras el Paleolítico y el Neolítico, la influencia de la civilización egipcia y la llegada de colonizadores fenicios aceleraron el ritmo evolutivo respecto a Europa.

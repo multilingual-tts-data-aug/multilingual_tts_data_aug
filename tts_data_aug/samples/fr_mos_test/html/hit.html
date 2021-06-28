@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>HIT</title><script type="text/javascript" src="./externalHIT_v1.js.download"></script></head>
+<body><form name="mturk_form" method="post" id="mturk_form" action="https://workersandbox.mturk.com/mturk/externalSubmit"><input type="hidden" value="3R0T90IZ1VO6LUIMVJXHJ3PYSVUGC5" name="assignmentId" id="assignmentId">
+
+<script src="./jquery.min.js.download"></script>
+
+<style type="text/css">
+  body { font-family: "Arial"; }
+  input[type=submit] { font-size: 2em; width: 10em;  height: 2em; }
+</style>
+<div align="center">
+
+<h1 class="mb-0-px">Dans quelle mesure les voix ci-dessous sont-elles naturelles et natives? <br> Évaluez chaque fragment sur une échelle de 1 à 5!</h1>
+
+<h3>1: mauvais, 2: moyen, 3: normal, 4: bon, 5: excellent <br></h3>
+
+<hr>
+
+
+<div id="voice_clips">Please activate JavaScript for this task.</div>
+
+<hr>
+
+<hr>
+
+<h1>
+
+  <form>
+    Quel est le jour de la semaine avant le vendredi? Écrivez la réponse ici avec un seul mot en français, sans ponctuation: <br>
+    <input type="text" name="Q1" size="100">
+    <br> <br>
+  </form>
+</h1>
+<hr>
+<br>
+<center>
+  <input type="submit" name="submit" value="submit" onclick="return validateSounds()">
+</center>
+</div>
+
+
+
+<script type="text/javascript">
+
+// config
+number_of_stimuli = 24 // stimuli presented for rating
+number_of_sentences = 50; // sentence per voice
+number_of_voices = 4; // total number of voices
+number_of_stimuli_per_voice = number_of_stimuli / number_of_voices;
+number_of_files = number_of_sentences * number_of_voices;
+number_of_voters = 1;
+debug = false;
+
+function activateRating(j) {
+  for (var v = 1; v <= 5; v++) {
+    $("#rating-"+ v +"-sound-"+j).prop('disabled', false);
+    $("#smiley-"+ v +"-"+j).prop('src', '_smiley'+v+'.png');
+  }
+}
+
+function highlightRating(j) {
+  for (var v = 1; v <= 5; v++) {
+    radio = $("#rating-"+ v +"-sound-"+j)
+    image = $("#smiley-"+ v +"-"+j);
+    if (radio.prop("checked") == true) {
+      image.prop('src', '_smiley'+v+'a.png');
+    } else {
+      image.prop('src', '_smiley'+v+'d.png');
+    }
+  }
+}
+
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
+$(document).ready(function() {
+  var hist = []; // histogram for debug statistics
+
+  // initialize debug statistics
+  for (var i = 0; i < number_of_files; i++) {
+    hist.push(0);
+  }
+
+  for (var n = 0; n < number_of_voters; n++) {
+  	// pool of stimuli
+    var pool = [];
+
+    // fill the pool with all unique sentences
+    for (var i = 0; i < number_of_sentences; i++) {
+      pool.push(i);
+    }
+
+    // randomize the pool
+    shuffleArray(pool);
+
+    // truncate array to number_of_stimuli
+    while (pool.length > number_of_stimuli) { pool.pop(); }
+
+    // assign equal amount to each voice
+    for (var i = 0; i < number_of_stimuli; i++) {
+      pool[i] = pool[i] + (i % number_of_voices) * number_of_sentences;
+    }
+
+    // randomize again
+    shuffleArray(pool);
+
+    // update debug statistics
+    for (var i = 0; i < number_of_stimuli; i++) {
+      hist[pool[i]] += 1;
+    }
+  }
+
+  voice_clips = ""; // actual HTML for stimuli
+
+  if (debug) {
+    // Output debug statistics for random selection:
+    var all = 0;
+    for (var i = 0; i < number_of_sentences; i++) {
+      voice_clips += "sentence " + (i+1)+  " ";
+      var total = 0;
+
+      for (var v = 0; v < number_of_voices; v++) {
+        var id =  i + v*number_of_sentences;
+      voice_clips +=  hist[id] + ", ";
+      total += hist[id];
+      }
+      voice_clips += " total " + total;
+      all += total;
+      voice_clips += "<br>";
+    }
+
+
+    voice_clips += "sentence sum ";
+    for (var v = 0; v < number_of_voices; v++) {
+      var voice_total = 0;
+      for (var i = 0; i < number_of_sentences; i++) {
+        var id =  i + v*number_of_sentences;
+        voice_total += hist[id];
+      }
+      voice_clips += voice_total + ", ";
+    }
+    voice_clips += "ALL: " + all + "<br>";
+  }
+
+  // contruct the voice clips list
+  for (var i = 0; i < number_of_stimuli; i++) {
+    j = i + 1
+    id = pool[i] + 1;
+    voice_clips +=
+    '<h3>Fragmento de voz '+j+'</h3>' +
+    '<audio controls id="div_sound_'+j+'" onended="activateRating('+j+');">' +
+      '<source src="https://mturkqanalysts.s3-us-west-2.amazonaws.com/'+id+'.wav" type="audio/wav">' +
+    '</audio>' +
+    '<div id="radio_'+j+'"><h3>';
+    for (var v = 1; v <= 5; v++) {
+         voice_clips +=
+           '<input type="radio" name="'+id+'-wav" value="'+v+'" id="rating-'+v+'-sound-'+j+'" disabled="true" onclick="highlightRating('+j+');">' +
+           '<label for="rating-'+v+'-sound-'+j+'">'+v+'<img valign=top src="_smiley'+v+'g.png" id="smiley-'+v+'-'+j+'"></label>';
+    }
+    voice_clips += '</h3></div>';
+  }
+
+  // populate the voice clips list
+  $('#voice_clips').html(voice_clips);
+});
+
+function validateSounds() {
+  var done = 0;
+  for (var i = 1; i <= number_of_stimuli; i++) {
+    for (var v = 1; v <= 5; v++) {
+      radio = $("#rating-"+ v +"-sound-"+i);
+      if (radio.prop("checked") == true) {
+        done++;
+      }
+    }
+  }
+  if (done == number_of_stimuli) {
+    return true;
+  } else {
+    alert('Please provide a rating for all samples!');
+    return false;
+  }
+}
+
+</script>
+
+</form><script language="Javascript">turkSetAssignmentID();</script></body></html>
