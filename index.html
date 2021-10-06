@@ -32,14 +32,17 @@
    <body>
       <article>
          <header>
-            <h1>Multilingual Speech Synthesis with Data Augmentation</h1>
+            <h1>Multilingual Text-To-Speech training using
+cross language voice conversion and self-supervised learning of speech representations</h1>
          </header>
       </article>
 
 
       <div>
         <h2>Abstract</h2>
-        <p>State of the art text-to-speech (TTS) models can generate high fidelity monolingual speech, but it remains a challenging problem to generate multilingual speech from a given speaker identity. One major hurdle is that the training data used in TTS systems is usually from monolingual speakers because it is extremely hard to source speakers with multilingual capabilities at the native level. Subsequently, language and speaker infor- mation are highly correlated which makes it very challenging for the model to disentangle their conditioning features both during training and at inference time. In this paper, we propose a data augmentation approach to tackle this problem. We leverage the power of a pre-trained cross-lingual representation model to extract speaker-independent context features and use these features as input to a voice conversion model. The voice con- version model is used to convert multilingual and multi-speaker speech data to the voice of the target speaker. A single-speaker, multilingual TTS is trained using the target speaker’s data from their native language together with the synthetic multilingual data converted from other speakers. Through augmenting data from four other languages, we built a multilingual TTS voice that speaks 5 languages(English, French, German, Italian and Spanish). Our system achieves improved Mean Opinion Score (MOS) compared with the baseline of multi-speaker system for all languages, specifically: 3.74 vs 3.62 for Spanish, 3.11 vs 2.71 for German, 3.47 vs 2.84 for Italian, and 2.72 vs 2.41 for French.      </div>
+        <p>State of the art text-to-speech (TTS) models can generate high fidelity monolingual speech, but it is still very challenging to synthesize multilingual speech from the same speaker. One major hurdle is that the training data used in TTS systems is usually from monolingual speakers, since it is very hard to find speakers who have native proficiency in several languages.
+ One way of mitigating this issue is by generating data for unseen speaker-language pairs using a voice conversion model trained on powerful cross-lingual speech representations. In this paper, we train a multilingual TTS system using data augmentation with our proposed cross language voice conversion model (CLVC). The voice conversion model is trained with speech representations extracted from a pre-trained cross-lingual representation model in together with pitch and speaker feature. We then further use this model to convert multilingual and multi-speaker speech data to the voice of the target speaker. Through augmenting data from four other languages, we train a multilingual TTS system for a native monolingual English speaker which speaks 5 languages(English, French, German, Italian and Spanish). Our system achieves improved Mean Opinion Score (MOS) compared with the baseline of multi-speaker system for all languages, specifically: 3.74 vs 3.62 for Spanish, 3.11 vs 2.71 for German, 3.47 vs 2.84 for Italian, and 2.72 vs 2.41 for French. 
+        </div>
 
       <h2> Supplementary audio samples </h2>
 
